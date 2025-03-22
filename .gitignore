@@ -26,6 +26,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.settings.py
+settings.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -102,7 +104,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env.dev
 .env
 .venv
 env/
@@ -110,7 +111,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-settings.py
+
 
 # Spyder project settings
 .spyderproject
@@ -130,18 +131,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-static/
-/static/
-*/static/
-
-media/
-/media/
-*/media/
-
 */migrations/*
 !*/migrations/__init__.py
-
-data_storage/
-/data_storage/
-data_storage/*
-*/data_storage

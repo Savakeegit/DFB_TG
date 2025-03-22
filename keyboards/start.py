@@ -1,17 +1,22 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-
-def start_login_kb():
+def main_menu_kb():
     kb_list = [
-        [InlineKeyboardButton(text="✅Войти", callback_data='login')],
+        [
+            InlineKeyboardButton(text="🐶 Управление собачками и их задачками 📓", callback_data='dogs_menu'),
+        ],
+        [
+            InlineKeyboardButton(text="🌳 Точки выгула", callback_data='walks'),
+            InlineKeyboardButton(text="🏥 Ветклиники", callback_data='vets')
+        ],
+        [
+            InlineKeyboardButton(text="🧑‍🏫 Кинологи", callback_data='cynologists'),
+            InlineKeyboardButton(text="🧠 Обучение", callback_data='lessons')
+        ],
+        [
+            InlineKeyboardButton(text="🔎 Поиск собачек", callback_data='search'),
+            InlineKeyboardButton(text="🚩 Статусы", callback_data='statuses')
+        ],
     ]
-    keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list)
-    return keyboard
-
-
-def start_registration_kb():
-    kb_list = [
-        [InlineKeyboardButton(text="❌Регистрация", callback_data='registration')],
-    ]
-    keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list)
+    keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list, one_time_keyboard=True)
     return keyboard

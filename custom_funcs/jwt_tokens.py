@@ -6,7 +6,7 @@ headers = {
     'X-Bot-Secret-Key': BOT_SECRET_KEY,
 }
 
-async def update_refresh_token(telegram_id, refresh_token):
+async def update_refresh_token_in_bd(telegram_id, refresh_token):
     async with aiohttp.ClientSession() as session:
         async with session.post(url=f'{API_URL}/users/edit-refresh-token/',
                                 json={

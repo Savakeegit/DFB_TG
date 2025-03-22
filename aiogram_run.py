@@ -1,7 +1,6 @@
 import asyncio
 from create_bot import bot, dp, scheduler
 
-# handlers
 from handlers.start import router as start_module
 from handlers.dog import router as dog_module
 
